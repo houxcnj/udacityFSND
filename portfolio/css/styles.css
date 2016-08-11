@@ -1,0 +1,62 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #2d3c49;
+    font-weight: 300;
+}
+
+.page-title {
+    display:flex;
+    flex-wrap: wrap;
+}
+/* make the title suitable for page wide */
+
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+/* ensure the width not wider than devices */
+
+.logo {
+    height: 125px;
+    width: 125px;
+}
+
+.title-name {
+    text-align: right;
+    font-size: 50px;
+    font-weight: 100;
+
+}
+
+.title-nick {
+    text-align: right;
+}
+
+.text1 {
+    color: #7d79ad;
+    font-weight: 700;
+}
+/*"featured work" color*/
+
+.text2 {
+    color: #2d3c49;
+    text-align: center;
+}
+
+.img-responsive2 {
+    height: 300px;
+    width: 400px;
+    display: flex;
+    margin: auto;
+}
+/* picture size and display method*/
+
+.feature-work {
+    text-align: center;
+    margin: auto;
+    align: center;
+    flex-wrap: wrap;
+}
