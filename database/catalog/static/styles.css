@@ -1,0 +1,16 @@
+
+
+.flash          { background: #cee5F5; 
+				  width:100%;}
+
+
+.banner.main {
+	height: 150px;
+	background: url("/static/sports-banner.jpg");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+
