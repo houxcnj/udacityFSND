@@ -35,13 +35,12 @@ ssh grader@52.43.200.135 -i ~/.ssh/udacityProject.rsa -p 2200
 
 1. Change ssh config file:
   1. Open the config file:
-    `$ vim /etc/ssh/sshd_config`
+    `$ sudo nano /etc/ssh/sshd_config`
   2. Change to Port 2200.
   3. Change `PermitRootLogin` from `without-password` to `no`.
-  4. * To get more detailed logging messasges, open `/var/log/auth.log` and change LogLevel from `INFO` to `VERBOSE`.
-  5. Temporalily change `PasswordAuthentication` from `no` to `yes`.
-  6. Append `UseDNS no`.
-  7. Append `AllowUsers NEWUSER`.
+  4. Temporalily change `PasswordAuthentication` from `no` to `yes`.
+  5. Append `UseDNS no`.
+  6. Append `AllowUsers NEWUSER`.
 
 2. Restart SSH Service:
   `$ /etc/init.d/ssh restart` or `# service sshd restart`
@@ -59,7 +58,7 @@ ssh grader@52.43.200.135 -i ~/.ssh/udacityProject.rsa -p 2200
   3. Login with the new user:
     `$ ssh grader@52.43.200.135 -i ~/.ssh/udacityProject.rsa -p 2200`
   4. Open SSHD config:
-    `$ sudo vim /etc/ssh/sshd_config`
+    `$ sudo nano /etc/ssh/sshd_config`
   5. Change `PasswordAuthentication` back from `yes` to `no`.
 
   [Based on 'Installing a Public Key'][3]
@@ -74,6 +73,8 @@ ssh grader@52.43.200.135 -i ~/.ssh/udacityProject.rsa -p 2200
   `$ sudo ufw allow 80/tcp`
 4. Allow incoming UDP packets on port 123 (NTP):
   `$ sudo ufw allow 123/udp`
+5. Deny incoming TCP packets on port 22 (SSH):
+  `$ sudo ufw deny 22/tcp`
 
   [Based on 'Configuring Ports in UFW'][4]
 
